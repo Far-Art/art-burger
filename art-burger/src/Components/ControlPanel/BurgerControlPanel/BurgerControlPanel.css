@@ -1,0 +1,4 @@
+.BurgerControlPanel {
+	display: flex;
+    flex-direction: column;
+}

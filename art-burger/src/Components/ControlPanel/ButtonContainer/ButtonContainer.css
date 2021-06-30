@@ -1,0 +1,49 @@
+.ButtonContainer{
+    display: inline-flex;
+    background: linear-gradient( #d2d2d2, #f1f1f1);
+    box-shadow:  10px 10px 20px #b8b8b8, -10px -10px 20px #fafafa;
+    width: 35%;
+    min-width: 180px;
+    max-width: 400px;
+    max-height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 0;
+    margin: 15px;
+}
+
+.ButtonContainer > * {
+    margin:auto;
+    border: none;
+    text-decoration: none;
+    font-family: Courier New ;
+    font-size: 150%;
+}
+
+.ButtonContainer > #icon-area { 
+    min-width: 25px;
+    margin: auto 5px 5px 5px;
+}
+
+.ButtonContainer > .control-btn {
+    background: none;
+    color: #bc434c;
+    height: 50px;
+    width: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 0;
+}
+
+.ButtonContainer > .control-btn:hover{
+    color: black;    
+}
+
+.ButtonContainer > .left-btn:hover {
+    background-image: linear-gradient(90deg, rgba(255,255,255,1),rgba(255,255,255,0));
+}
+.ButtonContainer > .right-btn:hover {
+    background-image: linear-gradient(90deg, rgba(255,255,255,0),rgba(255,255,255,1));
+
+}
+

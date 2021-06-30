@@ -1,0 +1,15 @@
+.Layout > section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+aside{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+main{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+
+

@@ -1,0 +1,17 @@
+.Header > h1{
+    font-size: 500%;
+    font-family: "Papyrus", Helvetica, Arial;
+    background: -webkit-linear-gradient(#bc434c, #4b3d8d);
+    text-shadow:  7px 10px 15px #474747, -5px -5px 7px #ffffff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color:transparent;
+    white-space: nowrap;
+}
+
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
