@@ -20,15 +20,10 @@ function ButtonContainer(props:Values): JSX.Element {
             <button className="control-btn right-btn">
                 +
             </button>
-            <script>{hover()}</script>
         </div>
     );
 }
 
-function hover():number{
-    let buttons = document.getElementsByClassName("control-btn");
-    buttons.item(0)
-    return 0;
-}
+
 
 export default ButtonContainer;

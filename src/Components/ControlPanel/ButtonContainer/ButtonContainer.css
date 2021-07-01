@@ -10,6 +10,7 @@
     overflow: hidden;
     padding: 0;
     margin: 15px;
+    user-select: none;
 }
 
 .ButtonContainer > * {
@@ -44,6 +45,11 @@
 }
 .ButtonContainer > .right-btn:hover {
     background-image: linear-gradient(90deg, rgba(255,255,255,0),rgba(255,255,255,1));
+
+}
+
+.ButtonContainer > .right-btn:hover .ButtonContainer{
+    transform: 50%;
 
 }
 

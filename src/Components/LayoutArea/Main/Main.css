@@ -5,6 +5,7 @@
     width: 100%;
     justify-items: center;
     text-align: center;
+    user-select: none;
 }
 
 .Main > div {
@@ -24,4 +25,8 @@
     width: 55%;
     margin: auto;
     padding-top: 78%;
+}
+
+.Main > div > a {
+    user-select: auto;
 }

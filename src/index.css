@@ -21,7 +21,12 @@ html, body, #root{
 }
 
 #root{
-  background-color: #e2e2e2;
+  background-color: #f5f5f5;
+}
+
+#root > * {
+  font-family: 'Baloo 2';
+  font-weight: 400;
 }
 
 code {
