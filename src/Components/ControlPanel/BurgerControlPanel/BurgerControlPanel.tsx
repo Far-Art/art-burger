@@ -5,14 +5,21 @@ import cheeseIcon from '../../../Assets/Icons/cheese-svgrepo-com.svg';
 import saladIcon from '../../../Assets/Icons/salad-svgrepo-com.svg';
 import tomatoIcon from '../../../Assets/Icons/tomato-svgrepo-com.svg';
 import meatIcon from '../../../Assets/Icons/meat-burger-svgrepo-com.svg';
+import { IngredientType } from "../../BurgerArea/IngredientType";
+import store from "../../../Redux/Store";
+import { clearIngredientsAction } from "../../../Redux/Actions/BurgerAction";
 
 function BurgerControlPanel(): JSX.Element {
     return (
         <div className="BurgerControlPanel">
-			<ButtonContainer text={"cheese"} icon={cheeseIcon} />
-            <ButtonContainer text={"salad"} icon={saladIcon} />
-            <ButtonContainer text={"tomato"} icon={tomatoIcon} />
-            <ButtonContainer text={"patty"} icon={meatIcon} />
+			<ButtonContainer ingredient={IngredientType.CHEESE} icon={cheeseIcon} />
+            <ButtonContainer ingredient={IngredientType.SALAD} icon={saladIcon} />
+            <ButtonContainer ingredient={IngredientType.TOMATO} icon={tomatoIcon} />
+            <ButtonContainer ingredient={IngredientType.PATTY} icon={meatIcon} />
+            
+            <button className="clear-btn" onClick={() => {
+                store.dispatch(clearIngredientsAction());
+            }}>Clear</button>
         </div>
     );
 }

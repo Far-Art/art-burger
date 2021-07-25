@@ -1,55 +1,38 @@
 .ButtonContainer{
     display: inline-flex;
-    background: linear-gradient( #d2d2d2, #f1f1f1);
-    box-shadow:  10px 10px 20px #b8b8b8, -10px -10px 20px #fafafa;
-    width: 35%;
-    min-width: 180px;
-    max-width: 400px;
-    max-height: 50px;
-    border-radius: 50px;
     overflow: hidden;
-    padding: 0;
-    margin: 15px;
     user-select: none;
 }
 
 .ButtonContainer > * {
-    margin:auto;
-    border: none;
-    text-decoration: none;
-    font-family: Courier New ;
-    font-size: 150%;
+    margin: auto;
 }
 
-.ButtonContainer > #icon-area { 
-    min-width: 25px;
-    margin: auto 5px 5px 5px;
+.ButtonContainer > #icon-area > img { 
+    margin: 0.5vh;
+    max-width: 2.2rem;
+    height: 3vh;
 }
 
-.ButtonContainer > .control-btn {
+.control-btn {
     background: none;
+    width: 5vw;
+    height: 100%;
+    max-width: 4rem;
+    font-size: 140%;
+    z-index: 5;
     color: #bc434c;
-    height: 50px;
-    width: 40px;
-    font-weight: 900;
     cursor: pointer;
-    margin: 0;
+    margin: auto 0;
+    border: none;
 }
 
-.ButtonContainer > .control-btn:hover{
-    color: black;    
+.control-btn:hover {
+    background:  rgba(255,255,255, 0.4);
+    color: black;
+    border-radius: 5vw;
 }
 
-.ButtonContainer > .left-btn:hover {
-    background-image: linear-gradient(90deg, rgba(255,255,255,1),rgba(255,255,255,0));
+.control-btn:active {
+    background:  rgba(255, 255, 255, 1);
 }
-.ButtonContainer > .right-btn:hover {
-    background-image: linear-gradient(90deg, rgba(255,255,255,0),rgba(255,255,255,1));
-
-}
-
-.ButtonContainer > .right-btn:hover .ButtonContainer{
-    transform: 50%;
-
-}
-

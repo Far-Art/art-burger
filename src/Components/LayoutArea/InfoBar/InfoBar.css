@@ -1,0 +1,22 @@
+.InfoBar {
+    display: flex;
+    background: linear-gradient( rgba(255,255,255, 0.4), rgba(255,255,255, 0.3));
+    box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5vw;
+    justify-content: center;
+    backdrop-filter:blur(0.3rem);
+    z-index: 2;
+}
+
+.InfoBar > * {
+    font-weight: 500;
+    font-size: 108%;
+    text-align: center;
+    width: 20vw;
+    min-width: 10rem;
+    height: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: auto 0.05rem;
+    margin: auto 1rem;
+}

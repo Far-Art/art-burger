@@ -1,15 +1,60 @@
-.Layout > section{
+.Layout {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 8rem 5rem 1fr 1.55rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px;
+    height: 100%;
 }
 
-aside{
-    grid-area: 1 / 1 / 2 / 2;
+/* header contains logo */
+header{
+    grid-area: 1 / 1 / 2 / 4;
+    height: 100%;
+    max-height: 100%;
 }
 
+/* #infoBar contains burger price and calories */
+#infoBar, #infoBar > * {
+    position: relative;
+    grid-area: 2 / 1 / 3 / 4;
+    min-height: 2rem;
+    height: 5vh;
+    max-height: 3rem;
+    margin: 0 2rem;
+}
+
+/* aside contains burger control buttons */
+aside, aside > *{
+    grid-area: 3 / 1 / 4 / 2;
+    height: 30vh;
+    min-height: 17rem;
+    width: 15vw;
+    min-width: 13rem;
+    max-width: 22rem;
+}
+
+aside > * {
+    width: 100%;
+}
+
+/* main contains the burger, girl images and table image*/
 main{
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 3 / 2 / 4 / 3;
+    width: 100%;
+    height: 100%;
 }
 
+/* contains link to the author's portfolio */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    grid-area: 4 / 1 / 5 / 4;
+}
 
-
+/* mobile layout */
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }

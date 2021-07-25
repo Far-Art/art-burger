@@ -1,0 +1,7 @@
+
+/* mobile layout */
+@media only screen and (max-width: 600px) {
+    .Header > h1{
+        font-size: 450%;
+    }
+}
