@@ -1,29 +1,62 @@
+import React from "react";
+import { Component } from "react";
+import { classicNameResolver } from "typescript";
+import { addIngredientAction, removeIngredientAction } from "../../../Redux/Actions/BurgerAction";
+import store from "../../../Redux/Store";
+import { IngredientType } from "../../BurgerArea/IngredientType";
 import "./ButtonContainer.css";
 
 interface Values{
-    text:string;
+    ingredient:IngredientType;
     icon:string;
 }
 
 function ButtonContainer(props:Values): JSX.Element {
+    store.subscribe(()=>{});
     return (
         <div className="ButtonContainer">
-			<button className="control-btn left-btn">
+			<button 
+                id={("remove-" + props.ingredient)} 
+                className={removeIngredient(props.ingredient)}
+                // className="control-btn left-btn"
+                onClick={() => removeIngredient(props.ingredient)}
+                >
                 -
             </button>
-            <div id="icon-area">
-                <img src={props.icon} alt="ingredient-icon"></img>
-            </div>
             <div id="text-area">
-                {props.text}
+                <img src={props.icon} alt="ingredient-icon"/>
+                {props.ingredient}
             </div>
-            <button className="control-btn right-btn">
+            <button 
+                id={("add-" + props.ingredient)} 
+                className="control-btn right-btn"
+                onClick={() => addIngredient(props.ingredient)}
+                >
                 +
             </button>
         </div>
     );
 }
 
+function addIngredient(ingredient: IngredientType){
+    
+    const classes = "control-btn right-btn";
+    let ingredientCount = store.getState().burgerState.ingredients.filter(item => item === ingredient);
+    // if(ingredientCount.length === 0){
+    //     return classes + " disabled";
+    // }
+    store.dispatch(addIngredientAction(ingredient));
+    // return classes + " enabled";
+}
 
+function removeIngredient(ingredient: IngredientType){
+    const classes = "control-btn left-btn";
+    let ingredientCount = store.getState().burgerState.ingredients.filter(item => item === ingredient);
+    if(ingredientCount.length === 0){
+        // return classes + " disabled";
+    }
+    store.dispatch(removeIngredientAction(ingredient));
+    return classes + " enabled";
+}
 
 export default ButtonContainer;

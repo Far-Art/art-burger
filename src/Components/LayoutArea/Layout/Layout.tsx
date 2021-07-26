@@ -1,9 +1,10 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Info from "../Info/Info";
+import InfoBar from "../InfoBar/InfoBar";
 import Main from "../Main/Main";
 import SidePanel from "../SidePanel/SidePanel";
 import "./Layout.css";
+import "./MobileLayout.css";
 
 function Layout(): JSX.Element {
     return (
@@ -11,17 +12,15 @@ function Layout(): JSX.Element {
                 <header>
                     <Header />
                 </header>
-                <div>
-                    <Info />
+                <div id="infoBar">
+                    <InfoBar />
                 </div>
-                <section>
-                    <aside>
-                        <SidePanel/>
-                    </aside>
-                    <main>
-                        <Main />
-                    </main>
-                </section>
+                <aside>
+                    <SidePanel/>
+                </aside>
+                <main>
+                    <Main />
+                </main>
                 <footer>
                     <Footer />
                 </footer>

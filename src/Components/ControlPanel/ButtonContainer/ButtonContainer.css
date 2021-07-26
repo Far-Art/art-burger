@@ -1,55 +1,72 @@
+.disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.enabled {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
 .ButtonContainer{
     display: inline-flex;
-    background: linear-gradient( #d2d2d2, #f1f1f1);
-    box-shadow:  10px 10px 20px #b8b8b8, -10px -10px 20px #fafafa;
-    width: 35%;
-    min-width: 180px;
-    max-width: 400px;
-    max-height: 50px;
-    border-radius: 50px;
     overflow: hidden;
-    padding: 0;
-    margin: 15px;
     user-select: none;
+    background: linear-gradient( rgba(255,255,255, 0.4), rgba(255,255,255, 0.3));
+    box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter:blur(0.3rem);
+    border-radius: 50vw;
+    height: 4vh;
+    margin: 0.8vh;
+    font-size: 115%;
+    border: none;
+    min-height: 2.5rem;
 }
 
 .ButtonContainer > * {
-    margin:auto;
-    border: none;
-    text-decoration: none;
-    font-family: Courier New ;
-    font-size: 150%;
+    margin: auto;
+    padding: 0;
 }
 
-.ButtonContainer > #icon-area { 
-    min-width: 25px;
-    margin: auto 5px 5px 5px;
+#text-area {
+    min-width: 6rem;
 }
 
-.ButtonContainer > .control-btn {
+#text-area > * {
+    display: inline;
+}
+
+#text-area > img { 
+    vertical-align: middle;
+    margin: auto 3%;
+    max-width: 2rem;
+    min-height: 1rem;
+    height: 3vh;
+}
+
+.control-btn {
+    text-align: center;
     background: none;
+    width: 20%;
+    height: 100%;
+    max-width: 4rem;
+    font-size: 125%;
     color: #bc434c;
-    height: 50px;
-    width: 40px;
-    font-weight: 900;
     cursor: pointer;
-    margin: 0;
+    margin: auto 0;
+    border: none;
+    min-width: 10px;
+    transition-duration: 300ms;
 }
 
-.ButtonContainer > .control-btn:hover{
-    color: black;    
+.control-btn:hover {
+    background:  rgba(255,255,255, 0.4);
+    color: black;
+    border-radius: 5vw;
+    
 }
 
-.ButtonContainer > .left-btn:hover {
-    background-image: linear-gradient(90deg, rgba(255,255,255,1),rgba(255,255,255,0));
+.control-btn:active {
+    background:  rgba(255, 255, 255, 1);
 }
-.ButtonContainer > .right-btn:hover {
-    background-image: linear-gradient(90deg, rgba(255,255,255,0),rgba(255,255,255,1));
-
-}
-
-.ButtonContainer > .right-btn:hover .ButtonContainer{
-    transform: 50%;
-
-}
-

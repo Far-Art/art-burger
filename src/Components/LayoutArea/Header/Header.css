@@ -1,8 +1,20 @@
+/* this grid alignes two h1 inside the header */
+.Header{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    height: inherit;
+    max-height: inherit;
+    text-align: center;
+}
+
 .Header > h1{
-    font-size: 500%;
-    font-family: "Papyrus", Helvetica, Arial;
-    background: -webkit-linear-gradient(#bc434c, #4b3d8d);
-    text-shadow:  7px 10px 15px #474747, -5px -5px 7px #ffffff;
+    z-index: 2;
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 700%;
+    font-weight: 500;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    background: -webkit-linear-gradient(#eb3a46, #4930b9);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -10,8 +22,9 @@
     white-space: nowrap;
 }
 
-.Header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* this property cast shadow under the text 
+(because of background clip setting shadow directly to text makes it overlap the text color and change it) */
+#h1-shadow{
+    z-index: 1;
+    text-shadow:  0 0 4px rgba(255, 255, 255, 0.6), 5px 10px 15px rgba(0, 0, 0, 0.5);
 }
