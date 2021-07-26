@@ -25,16 +25,16 @@ header{
 
 /* aside contains burger control buttons */
 aside, aside > *{
+    position: sticky;
+    top: 0;
+    left: calc(5% + 10px);
+    margin: 0;
     grid-area: 3 / 1 / 4 / 2;
     height: 30vh;
-    min-height: 17rem;
     width: 15vw;
     min-width: 13rem;
-    max-width: 22rem;
-}
-
-aside > * {
-    width: 100%;
+    max-width: 17rem;
+    z-index: 10;
 }
 
 /* main contains the burger, girl images and table image*/
@@ -50,6 +50,7 @@ footer {
     bottom: 0;
     width: 100%;
     grid-area: 4 / 1 / 5 / 4;
+    z-index: 10;
 }
 
 /* mobile layout */

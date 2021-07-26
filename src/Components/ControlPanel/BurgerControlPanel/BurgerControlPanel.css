@@ -3,20 +3,19 @@
     flex-direction: column;
 }
 
-.BurgerControlPanel > .ButtonContainer, .BurgerControlPanel > button {
+.BurgerControlPanel > button {
     background: linear-gradient( rgba(255,255,255, 0.4), rgba(255,255,255, 0.3));
     box-shadow:  10px 10px 20px rgba(0, 0, 0, 0.15);
     backdrop-filter:blur(0.3rem);
+    color: #bc434c;
     border-radius: 5vw;
     height: 4vh;
     margin: 0.8vh;
     z-index: 3;
     font-size: 115%;
     border: none;
-}
-
-.BurgerControlPanel > button{
-    color: #bc434c;
+    min-height: 2.5rem;
+    transition-duration: 300ms;
 }
 
 .BurgerControlPanel > button:hover {

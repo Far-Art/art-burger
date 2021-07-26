@@ -26,20 +26,20 @@ function Main(): JSX.Element {
     );
 }
 
-function Main(): JSX.Element {
-    return (
-        <div className="Main">
+// function Main(): JSX.Element {
+//     return (
+//         <div className="Main">
            
-            <div className="Burger-Container">
-                <BurgerContainer />
-            </div>
-            <div id="dinner">
-                <img src={dinner} alt="People Eat at table"/>
-            </div> 
+//             <div className="Burger-Container">
+//                 <BurgerContainer />
+//             </div>
+//             <div id="dinner">
+//                 <img src={dinner} alt="People Eat at table"/>
+//             </div> 
             
-        </div>
-    );
-}
+//         </div>
+//     );
+// }
 
 
 export default Main;

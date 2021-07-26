@@ -1,11 +1,20 @@
+.Burger-Container{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
 .BurgerContainer {
-    width: 50% !important; 
-    margin: auto ;
     padding-top: 78% ;
+    --height-var: 2.2vw;
+    --min-height-var: 1.2rem;
 }
 
 .BurgerContainer > * {
     list-style-type: none;
+    padding: 0;
+    margin: auto;
+    width: 50%;
 }
 
 /* all ingredients style */
@@ -16,18 +25,25 @@
 #top-bun{
     background-image: linear-gradient(0deg, rgb(224, 128, 18),rgb(248, 188, 120),rgb(248, 188, 120));
     border-radius: 120px 120px 20px 20px;
-    height: calc(3vh + 5px);
+    height: calc(var(--height-var) + 10px);
+    min-height: calc(var(--min-height-var) + 20px);
+    max-height: 5rem;
 }
 
 #bottom-bun{
     background-image: linear-gradient(0deg, rgb(114, 61, 0),rgb(207, 122, 24),rgb(216, 120, 10),rgb(255, 136, 0));
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    height: calc(2vh - 10px);
+    height: calc(var(--height-var) - 10px);
+    min-height: calc(var(--min-height-var) );
+    max-height: 5rem;
+    
 }
 
 .patty{
-    height: 1.3vh;
+    height:calc(var(--height-var) - 4px);
+    min-height: var(--min-height-var);
+    max-height: 2rem;
     background-image: linear-gradient(0deg, rgb(30, 16, 15), rgb(99, 44, 24), rgb(74, 19, 16),rgb(30, 16, 15));
     border-radius: 7px;
 }

@@ -15,7 +15,6 @@ function BurgerContainer(): JSX.Element {
             <ol className="burger">
                 <li id="bottom-bun"></li>
             </ol>
-            
         </div>
     );
 }
