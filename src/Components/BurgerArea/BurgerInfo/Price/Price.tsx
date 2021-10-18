@@ -2,26 +2,23 @@ import { Component } from "react";
 import "./Price.css";
 import store from "../../../../Redux/Store";
 import { IngredientType } from "../../IngredientType";
+import AppLogic from "../../../../AppLogic/AppLogic";
 
 interface PriceState {
     burgerPrice: number;
 }
-class Price extends Component<{},PriceState> {
 
-    private CHEESE_COST = 1;
-    private PATTY_COST = 2.5;
-    private TOMATO_COST = 0.5;
-    private SALAD_COST = 0.5;
+export default class Price extends Component<{}, PriceState> {
 
-    public constructor(props:{}){
+    public constructor(props: {}) {
         super(props);
-        this.state = { burgerPrice: 0};
+        this.state = { burgerPrice: 0 };
     }
 
-    componentDidMount(){
-        this.setState({burgerPrice: this.calcPrice(store.getState().burgerState.ingredients)});
+    componentDidMount() {
+        this.setState({ burgerPrice: this.calcPrice(store.getState().burgerAppState.ingredients) });
         store.subscribe(() => {
-            this.setState({burgerPrice: this.calcPrice(store.getState().burgerState.ingredients)});
+            this.setState({ burgerPrice: this.calcPrice(store.getState().burgerAppState.ingredients) });
         })
     }
 
@@ -33,22 +30,19 @@ class Price extends Component<{},PriceState> {
         );
     }
 
-    calcPrice(ingredients: IngredientType[]):number{
-        let price = 1; // top and bottom bun cost
-            ingredients.forEach(element => {
-                if(element === IngredientType.CHEESE){
-                    price += this.CHEESE_COST;
-                } else if(element === IngredientType.PATTY){
-                    price += this.PATTY_COST;
-                } else if(element === IngredientType.TOMATO){
-                    price += this.TOMATO_COST;
-                } else if(element === IngredientType.SALAD){
-                    price += this.SALAD_COST;
-                }
-            });
+    calcPrice(ingredients: IngredientType[]): number {
+        let price = AppLogic.ingredients.topBun.price + AppLogic.ingredients.bottomBun.price;
+        ingredients.forEach(element => {
+            if (element === IngredientType.CHEESE) {
+                price += AppLogic.ingredients.cheese.price;
+            } else if (element === IngredientType.PATTY) {
+                price += AppLogic.ingredients.patty.price;
+            } else if (element === IngredientType.TOMATO) {
+                price += AppLogic.ingredients.tomato.price;
+            } else if (element === IngredientType.SALAD) {
+                price += AppLogic.ingredients.salad.price;
+            }
+        });
         return price;
     }
 }
-
-export default Price;
-
