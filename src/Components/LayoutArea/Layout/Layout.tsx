@@ -4,28 +4,26 @@ import InfoBar from "../InfoBar/InfoBar";
 import Main from "../Main/Main";
 import SidePanel from "../SidePanel/SidePanel";
 import "./Layout.css";
-import "./MobileLayout.css";
 
-function Layout(): JSX.Element {
+export default function Layout(): JSX.Element {
     return (
-        <div className="Layout">
+        <>
+            <div className="Layout">
                 <header>
                     <Header />
                 </header>
-                <div id="infoBar">
-                    <InfoBar />
-                </div>
-                <aside>
-                    <SidePanel/>
-                </aside>
+
+                <InfoBar />
+
                 <main>
+                    <SidePanel />
                     <Main />
                 </main>
-                <footer>
-                    <Footer />
-                </footer>
-        </div>
+
+            </div>
+            <footer>
+                <Footer />
+            </footer>
+        </>
     );
 }
-
-export default Layout;

@@ -1,61 +1,20 @@
 .Layout {
-    display: grid;
-    grid-template-rows: 8rem 5rem 1fr 1.55rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px;
-    height: 100%;
-}
-
-/* header contains logo */
-header{
-    grid-area: 1 / 1 / 2 / 4;
-    height: 100%;
-    max-height: 100%;
-}
-
-/* #infoBar contains burger price and calories */
-#infoBar, #infoBar > * {
     position: relative;
-    grid-area: 2 / 1 / 3 / 4;
-    min-height: 2rem;
-    height: 5vh;
-    max-height: 3rem;
-    margin: 0 2rem;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-/* aside contains burger control buttons */
-aside, aside > *{
-    position: sticky;
-    top: 0;
-    left: calc(5% + 10px);
-    margin: 0;
-    grid-area: 3 / 1 / 4 / 2;
-    height: 30vh;
-    width: 15vw;
-    min-width: 13rem;
-    max-width: 17rem;
-    z-index: 10;
-}
-
-/* main contains the burger, girl images and table image*/
-main{
-    grid-area: 3 / 2 / 4 / 3;
+main {
+    position: relative;
     width: 100%;
     height: 100%;
+    /* height: 100vh; */
 }
 
-/* contains link to the author's portfolio */
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    grid-area: 4 / 1 / 5 / 4;
-    z-index: 10;
 }
-
-/* mobile layout */
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
-  }

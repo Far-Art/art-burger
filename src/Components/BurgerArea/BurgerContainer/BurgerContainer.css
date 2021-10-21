@@ -1,67 +1,94 @@
-.Burger-Container{
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-
 .BurgerContainer {
-    padding-top: 78% ;
-    --height-var: 2.2vw;
-    --min-height-var: 1.2rem;
+    position: relative;
+    transform: translateY(calc(var(--girl-height) / 1.8));
+    -webkit-transform: translateY(calc(var(--girl-height) / 1.8));
+    min-width: var(--girl-width);
 }
 
-.BurgerContainer > * {
-    list-style-type: none;
-    padding: 0;
-    margin: auto;
-    width: 50%;
+.Burger {
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
-/* all ingredients style */
-.burger > li{
-    box-shadow: 0px 0px 15px rgba(90,24,0,0.5);
+.Burger * {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: var(--burger-width);
+    position: relative;
 }
 
-#top-bun{
-    background-image: linear-gradient(0deg, rgb(224, 128, 18),rgb(248, 188, 120),rgb(248, 188, 120));
-    border-radius: 120px 120px 20px 20px;
-    height: calc(var(--height-var) + 10px);
-    min-height: calc(var(--min-height-var) + 20px);
-    max-height: 5rem;
+.Ingredients > * {
+    --shadow-size: 0.3vw;
+    --shadow-color: rgba(0 0 0 / 0.5);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06))
+        drop-shadow(0 4px 8px rgba(0, 0, 0, 0.06));
 }
 
-#bottom-bun{
-    background-image: linear-gradient(0deg, rgb(114, 61, 0),rgb(207, 122, 24),rgb(216, 120, 10),rgb(255, 136, 0));
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: calc(var(--height-var) - 10px);
-    min-height: calc(var(--min-height-var) );
-    max-height: 5rem;
-    
+/*                      Ingredients style 
+----------------------------------------------------------------------*/
+.top-bun {
+    background-image: url("../../../Assets/Burger/top-bun.png");
+    height: calc(var(--burger-height) * 3);
+    margin-bottom: -0.3vw;
+    z-index: 9999;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.09))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.09))
+        drop-shadow(0 4px 8px rgba(0, 0, 0, 0.09));
 }
 
-.patty{
-    height:calc(var(--height-var) - 4px);
-    min-height: var(--min-height-var);
-    max-height: 2rem;
-    background-image: linear-gradient(0deg, rgb(30, 16, 15), rgb(99, 44, 24), rgb(74, 19, 16),rgb(30, 16, 15));
-    border-radius: 7px;
+.bottom-bun {
+    background-image: url("../../../Assets/Burger/bottom-bun.png");
+    height: calc(var(--burger-height) * 1.1);
+    margin-top: -0.2vw;
+    z-index: -9999;
+    filter: var(--filter-drop-shadow);
 }
 
-.salad{
-    min-height: 4px;
-    background-image: linear-gradient(0deg, rgb(66, 124, 4), rgb(193, 209, 85), rgb(158, 203, 42));
-    border-radius: 4px;
+.patty {
+    background-image: url("../../../Assets/Burger/patty.png");
+    height: var(--burger-height);
+    margin: calc(var(--burger-height) * -0.2) auto;
 }
 
-.tomato{
-    min-height: 8px;
-    background-image: linear-gradient(0deg, rgb(196, 0, 0), rgb(155, 26, 26), rgb(196, 26, 26));
-    border-radius: 4px;
+.patty-even {
+    transform: rotateY(190deg);
+    -webkit-transform: rotateY(190deg);
 }
 
-.cheese{
-    min-height: 5px;
-    background-image: linear-gradient(0deg, rgb(251, 255, 6), rgb(255, 208, 0));
-    border-radius: 4px;
+.salad {
+    background-image: url("../../../Assets/Burger/salad.png");
+    height: calc(var(--burger-height) * 1.3);
+    margin-bottom: calc(var(--burger-height) * -1.1);
+}
+
+.salad-even {
+    transform: rotateY(170deg) rotateX(10deg);
+    -webkit-transform: rotateY(170deg) rotateX(10deg);
+}
+
+.tomato {
+    background-image: url("../../../Assets/Burger/tomato.png");
+    height: calc(var(--burger-height) * 0.45);
+    margin: calc(var(--burger-height) * -0.1) auto;
+    transform: translateX(-0.2vw);
+    -webkit-transform: translateX(-0.2vw);
+}
+
+.tomato-even {
+    height: calc(var(--burger-height) * 0.6);
+    transform: translateX(0.15vw) scaleX(96%);
+    -webkit-transform: translateX(0.15vw) scaleX(96%);
+}
+
+.cheese {
+    background-image: url("../../../Assets/Burger/cheese.png");
+    height: calc(var(--burger-height) * 1.25);
+    margin-bottom: calc(var(--burger-height) * -1.1);
+}
+
+.cheese-even {
+    transform: rotateY(170deg) rotateX(30deg);
+    -webkit-transform: rotateY(170deg) rotateX(30deg);
 }

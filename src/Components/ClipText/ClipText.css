@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Rubik:ital,wght@0,900;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.ClipText {
+    position: relative;
+    padding: 0;
+    margin: 15px auto;
+}
+
+.ClipText > .ClipTextContainer > *,
+.ClipText > .ClipTextShadowContainer > * {
+    font-family: 'Pacifico', cursive;
+    font-weight: 900;
+    display: list-item;
+    color: black;
+    text-align: center;
+}
+
+.ClipText > .ClipTextContainer {
+    position: relative;
+    background-clip: text;
+    background-size: cover cover;
+    background-position: center;
+}
+
+.ClipText > .ClipTextShadowContainer {
+    position: absolute;
+    width: 100%;
+}
