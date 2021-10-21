@@ -7,22 +7,23 @@ import "./Layout.css";
 
 export default function Layout(): JSX.Element {
     return (
-        <div className="Layout">
+        <>
+            <div className="Layout">
                 <header>
                     <Header />
                 </header>
-                <div id="infoBar">
-                    <InfoBar />
-                </div>
-                <aside>
-                    <SidePanel/>
-                </aside>
+
+                <InfoBar />
+
                 <main>
+                    <SidePanel />
                     <Main />
                 </main>
-                <footer>
-                    <Footer />
-                </footer>
-        </div>
+
+            </div>
+            <footer>
+                <Footer />
+            </footer>
+        </>
     );
 }
