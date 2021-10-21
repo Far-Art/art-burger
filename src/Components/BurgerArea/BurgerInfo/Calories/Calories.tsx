@@ -24,7 +24,7 @@ export default class Calories extends Component<{}, CaloriesState> {
 
     public render(): JSX.Element {
         return (
-            <div className="Calories">
+            <div className="Calories InfoClass">
                 calories: {this.state.burgerCalories} kcal
             </div>
         );

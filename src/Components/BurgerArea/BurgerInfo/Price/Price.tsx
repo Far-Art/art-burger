@@ -24,7 +24,7 @@ export default class Price extends Component<{}, PriceState> {
 
     public render(): JSX.Element {
         return (
-            <div className="Price">
+            <div className="Price InfoClass">
                 price: {this.state.burgerPrice} $
             </div>
         );
