@@ -1,15 +1,14 @@
+import BurgerName from "../../BurgerArea/BurgerInfo/BurgerName/BurgerName";
 import Calories from "../../BurgerArea/BurgerInfo/Calories/Calories";
 import Price from "../../BurgerArea/BurgerInfo/Price/Price";
 import "./InfoBar.css";
 
-/* This is navigation menu for the site */
-function InfoBar(): JSX.Element {
+export default function InfoBar(): JSX.Element {
     return (
         <div className="InfoBar">
             <Calories />
+            <BurgerName />
             <Price />
         </div>
     );
 }
-
-export default InfoBar;
