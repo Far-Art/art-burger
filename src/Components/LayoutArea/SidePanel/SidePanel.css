@@ -1,3 +1,16 @@
 .SidePanel {
-	height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: clamp(50px, 10vw, 400px);
+    z-index: 9999;
+}
+
+@media only screen and (max-width: 800px) {
+    .SidePanel {
+        position: static;
+        width: 100%;
+    }
 }
